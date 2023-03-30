@@ -35,6 +35,8 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/ts1.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -120,24 +122,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="project-img">
-                            <img src="assets\img\Cheng Shiu University.jpg" class="img-res" alt="">
-                        </div><!-- /.project-img -->
+                        <div class="carousel clearfix">                           
+                            <div class="carousel-view clearfix"> 
+
+                                <div class="box">
+                                    <p><img src="assets/img/logo.jpg" class="img-res" alt=""></p>
+                                </div>       
+
+                                <div class="box">
+                                    <p><img src="assets/img/university.jpg" class="img-res" alt=""></p>
+                                </div>
+                              
+                                <div class="box">
+                                    <p><img src="assets/img/university2.jpg" class="img-res" alt=""></p>
+                                </div><!-- /.project-img -->
+                            </div>
+                        </div>
+                    </div>
                        
 
-                    </div>
-                    <aside class="col-md-4">
-                        <div class="project-info">
-                            <h5>描述
-                            </h5>
-
-                            <p class="project-description">該大學成立於 1965 年，目前提供日間課程。  （職業高中畢業生4年制工科研究生院）本科專業包括土木與幾何工程、電子工程、機械工程、電氣工程、工業工程等本科專業。行政與管理、室內建築與設計、計算機科學與信息工程、醫學工程、國際商務、工商管理、財務管理。 信息管理 幼兒保育和教育 化妝品和時裝設計 應用外語 康樂及體育管理 餐飲管理 旅遊和休閒 和數字多媒體設計 包括商業、技術和文科中最重要的學科領域。</p>
-                            <p class="project-description">正脩大學位於高雄市南區。 台灣 是高雄市郊澄清湖畔一處美麗的自然風景區。 靠近城市繁華和富裕的商業中心。 實現產學研緊密合作，讓學生牢牢把握社會動向。 但仍然遠離大城市的人群和喧囂。 這是培養優秀公民並為他們畢業後的職業生涯做好準備的理想場所。
-                            </p>
-
-                            <div class="project-date-category">
-                            
-                            </div><!-- /.project-cat -->
                             <!--
                             <a href="#" class="btn btn-gray">Visit Site</a>
                             
@@ -147,9 +150,20 @@
                                 <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
                                 <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
                             </div> --> <!-- /.social-links --> 
-                            
-                        </div><!-- /.project-description -->
-                    </aside>
+                        <aside class="col-md-4">    
+                            <div class="project-info">
+                                <br>
+                                <h5>Description</h5>
+                                <br>
+                                    <p>該大學成立於 1965 年，目前提供日間課程。  （職業高中畢業生4年制工科研究生院）本科專業包括土木與幾何工程、電子工程、機械工程、電氣工程、工業工程等本科專業。行政與管理、室內建築與設計、計算機科學與信息工程、醫學工程、國際商務、工商管理、財務管理。 信息管理 幼兒保育和教育 化妝品和時裝設計 應用外語 康樂及體育管理 餐飲管理 旅遊和休閒 和數字多媒體設計 包括商業、技術和文科中最重要的學科領域。</p>
+                                    <p>正脩大學位於高雄市南區。 台灣 是高雄市郊澄清湖畔一處美麗的自然風景區。 靠近城市繁華和富裕的商業中心。 實現產學研緊密合作，讓學生牢牢把握社會動向。 但仍然遠離大城市的人群和喧囂。 這是培養優秀公民並為他們畢業後的職業生涯做好準備的理想場所。</p>
+                                    <div class="text-right">
+                                    <div class="project-date-category">
+                                        <p><span>source:</span> https://www.talontiew.com</p>
+                                        <br>
+                                    </div>
+                            </div>    
+                        </aside>
                 </div>
             </div>
             
@@ -157,7 +171,13 @@
 
        
 
-    </main><!-- /#main -->
+    
+
+</section><!-- /.section-project -->
+
+
+
+</main><!-- /#main -->
 
     
 
@@ -173,6 +193,35 @@
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/jquery.shuffle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script>
+    $('.carousel-view').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  </script>
   
 </body>
 </html>
