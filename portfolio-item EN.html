@@ -35,6 +35,8 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/ts1.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -110,22 +112,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="project-img">
-                            <img src="assets\img\Cheng Shiu University.jpg" class="img-res" alt="">
-                        </div><!-- /.project-img -->
+                        <div class="carousel clearfix">                           
+                            <div class="carousel-view clearfix"> 
+
+                                <div class="box">
+                                    <p><img src="assets/img/logo.jpg" class="img-res" alt=""></p>
+                                </div>       
+
+                                <div class="box">
+                                    <p><img src="assets/img/university.jpg" class="img-res" alt=""></p>
+                                </div>
+                              
+                                <div class="box">
+                                    <p><img src="assets/img/university2.jpg" class="img-res" alt=""></p>
+                                </div><!-- /.project-img -->
+                            </div>
+                        </div>
+                    </div>
                        
 
-                    </div>
-                    <aside class="col-md-4">
-                        <div class="project-info">
-                            <h5>Description</h5>
-
-                            <p class="project-description">The university was founded in 1965, and currently offer day-time programs (graduate institute; four-year technical college for graduates from vocational senior high school). Undergraduate programs are namely We have successively founded undergraduate programs namely in Civil Engineering and Geomatics, Electronic Engineering, Mechanical Engineering, Electrical Engineering, Industrial Engineering and Management, Architecture and Interior Design, Computer Science and Information Engineering, Medical Engineering, International Business, Business Administration, Financial Management, Information Management, Early Childhood Care and Education, Cosmetics and Fashion Styling, Applied Foreign Languages, Leisure and Sports Management, Food and Beverage Management, Tourism and Recreation, and Digital Multimedia Design, including the most important disciplines in the field of business, technology and liberal arts.</p>
-                            <p class="project-description">Cheng Shiu University is located in the Southern District of Kaohsiung City, Taiwan.  It is a beautiful natural site on the shores of Cheng Ching Lake on the outskirts of Kaohsiung.  close enough to the city's bustling and affluent commercial center  to achieve close cooperation between industry, government and academia  and for students to be able to catch the social trend steadily  But still away from the crowds and distractions of big cities.  It is an ideal place to nurture good citizens and prepare them for careers after graduation.</p>
-
-                            <div class="project-date-category">
-                              
-                            </div><!-- /.project-cat -->
                             <!--
                             <a href="#" class="btn btn-gray">Visit Site</a>
                             
@@ -135,9 +140,21 @@
                                 <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
                                 <a class="linkedin-bg" href="#"><i class="fa fa-linkedin"></i></a>
                             </div> --> <!-- /.social-links --> 
-                            
-                        </div><!-- /.project-description -->
-                    </aside>
+                        <aside class="col-md-4">    
+                            <div class="project-info">
+                                <br>
+                                <h5>Description</h5>
+                                    <br>
+                                    
+                                    <p>The university was founded in 1965, and currently offer day-time programs (graduate institute; four-year technical college for graduates from vocational senior high school). Undergraduate programs are namely We have successively founded undergraduate programs namely in Civil Engineering and Geomatics, Electronic Engineering, Mechanical Engineering, Electrical Engineering, Industrial Engineering and Management, Architecture and Interior Design, Computer Science and Information Engineering, Medical Engineering, International Business, Business Administration, Financial Management, Information Management, Early Childhood Care and Education, Cosmetics and Fashion Styling, Applied Foreign Languages, Leisure and Sports Management, Food and Beverage Management, Tourism and Recreation, and Digital Multimedia Design, including the most important disciplines in the field of business, technology and liberal arts.</p>
+                                    <p>Cheng Shiu University is located in the Southern District of Kaohsiung City, Taiwan.  It is a beautiful natural site on the shores of Cheng Ching Lake on the outskirts of Kaohsiung.  close enough to the city's bustling and affluent commercial center  to achieve close cooperation between industry, government and academia  and for students to be able to catch the social trend steadily  But still away from the crowds and distractions of big cities.  It is an ideal place to nurture good citizens and prepare them for careers after graduation.</p>
+                                    <div class="text-right">
+                                    <div class="project-date-category">
+                                        <p><span>source:</span> https://www.talontiew.com</p>
+                                        <br>
+                                    </div>
+                            </div>    
+                        </aside>
                 </div>
             </div>
             
@@ -145,7 +162,13 @@
 
        
 
-    </main><!-- /#main -->
+    
+
+</section><!-- /.section-project -->
+
+
+
+</main><!-- /#main -->
 
     
 
@@ -161,6 +184,35 @@
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/jquery.shuffle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script>
+    $('.carousel-view').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  </script>
   
 </body>
 </html>
